@@ -1,0 +1,13 @@
+.background {
+    background-image: url(nature_4k_hd_league_of_legends_wild_rift.jpg);
+    background-position: center;
+}
+
+.header {
+    justify-self: center;
+    margin-top: 3%;
+    font-size: 6.2vw;
+    color: rgba(5, 4, 68, 0.699);
+    -webkit-text-stroke-color: rgb(231, 231, 161);
+    -webkit-text-stroke-width: 2px;
+}
