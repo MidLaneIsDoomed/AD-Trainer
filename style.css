@@ -1,13 +1,63 @@
 .background {
-    background-image: url(nature_4k_hd_league_of_legends_wild_rift.jpg);
+    background-image: url(images/nature_4k_hd_league_of_legends_wild_rift.jpg);
     background-position: center;
 }
 
 .header {
-    justify-self: center;
-    margin-top: 3%;
+    position: absolute;
+    left: 9.3%;
     font-size: 6.2vw;
     color: rgba(5, 4, 68, 0.699);
     -webkit-text-stroke-color: rgb(231, 231, 161);
     -webkit-text-stroke-width: 2px;
 }
+
+
+
+.main-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 10vw;
+}
+
+.buttons-container {
+    display: flex;
+    border: solid black;
+    width: 35vw;
+    height: auto;
+    margin-left: 11%;
+    justify-content: center;
+    gap: 1vw;
+}
+
+.buttons-container button {
+    
+    width: 8vw;
+    height: 4vw;
+    font-size: 1.5vw;
+    font-family:fantasy;
+    border-radius: 1.5vw;
+    border: solid black 0.2vw;
+}
+
+#AP-btn {
+    background-color:rgb(29, 89, 255);
+}
+
+#hybrid-btn {
+    background-color: rgb(105, 11, 117);
+}
+
+#AD-btn {
+    background-color: red;
+}
+
+#img-container {
+    border: solid black;
+    width: 30vw;
+    height: 40vw;
+    margin-right: 10%;
+}
+
