@@ -24,13 +24,19 @@
 
 .buttons-container {
     display: flex;
-    border: solid black;
-    width: 35vw;
+    flex-wrap: wrap-reverse;
+    width: 30vw;
     height: auto;
     margin-left: 11%;
     justify-content: center;
     gap: 1vw;
+    border:solid rgb(255, 255, 77) ;
+    background-color: rgba(0, 0, 0, 0.737);
+    border-radius: 10vw;
+    padding: 2vw 1vw 2vw 1vw;
 }
+
+
 
 .buttons-container button {
     
@@ -54,10 +60,15 @@
     background-color: red;
 }
 
+#start-btn {
+    background-color: #32CD32;
+}
+
 #img-container {
     border: solid black;
-    width: 30vw;
-    height: 40vw;
+    width: 27vw;
+    height: 37vw;
     margin-right: 10%;
+    
 }
 
