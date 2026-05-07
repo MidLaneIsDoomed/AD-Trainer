@@ -114,7 +114,7 @@ const champions = [
     { name: "Rammus", type: "AP" },
     { name: "RekSai", type: "AD" },
     { name: "Renekton", type: "AD" },
-    { name: "Shaco", type: "hybrid" },
+    { name: "Shaco", type: "AP" },
     { name: "Shen", type: "hybrid" },
     { name: "Shyvana", type: "hybrid" },
     { name: "Skarner", type: "hybrid" },
@@ -151,19 +151,10 @@ const childrenChamp = parentType.children;
 function startRandomizer() {
 
 
-    const randomIndex = Math.floor(Math.random() * childrenChamp.length);
-    const randomChild = childrenChamp[randomIndex];
-
-    
-    for (let i = 0; i < childrenChamp.length; i++) {
-        childrenChamp[i].style.display = "none";
-    }
-
-    randomChild.style.display = "block";
-
-    champName.innerHTML = champions[randomIndex].name;
+    randomizer()
 
     startBTN.style.display = "none";
+    parentType.style.opacity = "1"
 
     console.log("randomized");
 }
@@ -173,10 +164,83 @@ const stopBTN = document.getElementById("stop-btn")
 
 function stopRandomizer() {
 
+    correctWrong.style.backgroundColor = "rgba(0, 0, 0, 0.8)"
+    correctWrongText.innerHTML = ""
     startBTN.style.display = "block";
-    
-    
+    parentType.style.opacity = "0"
+    champName.innerHTML = "Tryck Start!"
 
+}
+
+const correctWrong = document.getElementById("correct-wrong");
+const correctWrongText = document.getElementById("correct-wrong-text")
+
+function pressedAP() {
+
+    if(currentChamp.type === "AP"){
+
+      correctWrong.style.backgroundColor = "#32CD32"
+      correctWrongText.innerHTML = "Correct!"
+  
+      console.log("correct")
+    } else {
+  
+      correctWrong.style.backgroundColor = "red"
+      correctWrongText.innerHTML = "Wrong ;("
+    }
+
+    randomizer();
+}
+
+function pressedAD() {
+
+  if(currentChamp.type === "AD"){
+
+    correctWrong.style.backgroundColor = "#32CD32"
+    correctWrongText.innerHTML = "Correct!"
+
+    console.log("correct")
+  } else {
+
+    correctWrong.style.backgroundColor = "red"
+    correctWrongText.innerHTML = "Wrong ;("
+  }
+ 
+  randomizer();
+}
+
+function pressedHybrid() {
+
+  if(currentChamp.type === "hybrid"){
+
+    correctWrong.style.backgroundColor = "#32CD32"
+    correctWrongText.innerHTML = "Correct!"
+
+    console.log("correct")
+  } else {
+
+    correctWrong.style.backgroundColor = "red"
+    correctWrongText.innerHTML = "Wrong ;("
+  }
+
+  randomizer();
+}
+
+function randomizer() {
+
+  const randomIndex = Math.floor(Math.random() * childrenChamp.length);
+
+  currentChamp = champions[randomIndex];
+
+  const randomChild = childrenChamp[randomIndex];
+
+  for (let i = 0; i < childrenChamp.length; i++) {
+      childrenChamp[i].style.display = "none";
+  }
+
+  randomChild.style.display = "block";
+
+  champName.innerHTML = currentChamp.name;
 }
 
 
