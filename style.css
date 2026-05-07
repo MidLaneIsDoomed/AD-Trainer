@@ -14,6 +14,7 @@
 }
 
 
+/*#region Laptop layout*/
 
 .main-layout {
     display: flex;
@@ -113,3 +114,91 @@
 #correct-wrong-text {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+/*#endregion */
+
+
+/*#region Mobile layout*/
+@media (max-width:1000px) {
+    
+    .header {
+        display: none;
+    }
+
+    .main-layout {
+        display: flex;
+        justify-content: unset;
+        gap: 10vw;
+        align-items: center;
+        top: 90vw;
+        flex-direction: column-reverse;
+        align-content: center;
+    
+    }
+
+    .buttons-container {
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap-reverse;
+        width: 60vw;
+        height: auto;
+        justify-content: center;
+        gap: 1vw;
+        border:solid rgb(255, 255, 77) ;
+        background-color: rgba(0, 0, 0, 0.737);
+        border-radius: 10vw;
+        padding: 2vw 1vw 2vw 1vw;
+    }
+    
+    .button-design {
+        width: 16vw;
+        height: 8vw;
+        font-size: 3vw;
+        font-family:fantasy;
+        border-radius: 3vw;
+        border: solid black 0.2vw;
+        transition: 0.1s ease-out;
+    }
+
+    #img-container {
+        position: relative;
+        margin: auto;
+        height: 80vw;
+        width: 70vw;
+        bottom: 60vw;
+    }
+    
+    #img-container *{
+        display: none;
+        width: 100%;
+    }
+
+    #champ-name-container {
+        position: absolute;
+        right: 34vw;
+        top: 20vw;
+        border-radius: 2vw;
+        width: 30vw;
+        height: 8vw;
+        background-color:  rgba(0, 0, 0, 0.8);
+        color: white;
+        text-align: center;
+        font-size: 2.6vw;
+        border: solid rgb(255, 255, 77) 1px;
+    }
+
+    #correct-wrong {
+        position: absolute;
+        top: 149.5vw;
+        right: 5.5vw;
+        border: solid black 1px;
+        width: 20vw;
+        height: 8vw;
+        border-radius: 2vw;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+}
+
+/*#endregion */
