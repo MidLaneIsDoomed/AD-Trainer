@@ -4,12 +4,13 @@
 }
 
 .header {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     position: absolute;
     left: 9.3%;
-    font-size: 6.2vw;
-    color: rgba(5, 4, 68, 0.699);
-    -webkit-text-stroke-color: rgb(231, 231, 161);
-    -webkit-text-stroke-width: 2px;
+    font-size: 7.5vw;
+    color: rgba(2, 2, 2, 0.799);
+    -webkit-text-stroke-color: rgb(255, 255, 77) ;
+    -webkit-text-stroke-width: 0.5px;
 }
 
 
@@ -27,7 +28,7 @@
     flex-wrap: wrap-reverse;
     width: 30vw;
     height: auto;
-    margin-left: 11%;
+    margin-left: 15.5%;
     justify-content: center;
     gap: 1vw;
     border:solid rgb(255, 255, 77) ;
@@ -36,16 +37,23 @@
     padding: 2vw 1vw 2vw 1vw;
 }
 
-
-
-.buttons-container button {
-    
+.button-design {
     width: 8vw;
     height: 4vw;
     font-size: 1.5vw;
     font-family:fantasy;
     border-radius: 1.5vw;
     border: solid black 0.2vw;
+    transition: 0.1s ease-out;
+}
+
+.button-design:hover {
+    opacity: 0.8;
+}
+
+.button-design:active {
+    transform: scale(0.97);
+    opacity: 0.9;
 }
 
 #AP-btn {
@@ -65,10 +73,27 @@
 }
 
 #img-container {
+    height: 37.7vw;
+    width: 20.6vw;
+    margin-right: 16%;
     border: solid black;
-    width: 27vw;
-    height: 37vw;
-    margin-right: 10%;
-    
 }
+
+#img-container *{
+    display: none;
+}
+
+#champ-name-container {
+    position: absolute;
+    top: 5vw;
+    right: 19.5vw;
+    border-radius: 1vw;
+    width: 15vw;
+    height: 4vw;
+    background-color:  rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    font-size: 1.3vw;
+}
+
 
